@@ -1,7 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, MessageCircle, Phone } from 'lucide-react';
-
 interface LanguageSelectorProps {
   currentLanguage: 'en' | 'hi' | 'te';
   onLanguageChange: (lang: 'en' | 'hi' | 'te') => void;
@@ -44,3 +40,4 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
 };
 
 export default LanguageSelector;
+
