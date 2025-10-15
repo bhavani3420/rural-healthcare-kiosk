@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, Phone, MessageCircle, MapPin, Heart, Stethoscope, Users, Shield, Clock, CheckCircle } from 'lucide-react';
+
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
 import SolutionSection from './components/SolutionSection';
@@ -10,19 +11,22 @@ import Footer from './components/Footer';
 import LanguageSelector from './components/LanguageSelector';
 import { translations } from './data/translations';
 
+// Type definition for supported languages
+type Language = 'en' | 'hi' | 'te';
+
 function App() {
-  const [currentLanguage, setCurrentLanguage] = useState<'en' | 'hi' | 'te'>('en');
+  const [currentLanguage, setCurrentLanguage] = useState<Language>('en');
   const t = translations[currentLanguage];
 
-  const handleLanguageChange = (lang: 'en' | 'hi' | 'te') => {
+  const handleLanguageChange = (lang: Language) => {
     setCurrentLanguage(lang);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
       {/* Language Selector */}
-      <LanguageSelector 
-        currentLanguage={currentLanguage} 
+      <LanguageSelector
+        currentLanguage={currentLanguage}
         onLanguageChange={handleLanguageChange}
         translations={translations}
       />
