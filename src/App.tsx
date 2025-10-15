@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Phone, MessageCircle, MapPin, Heart, Stethoscope, Users, Shield, Clock, CheckCircle } from 'lucide-react';
 import Hero from './components/Hero';
